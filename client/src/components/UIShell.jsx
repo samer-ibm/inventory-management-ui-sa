@@ -23,22 +23,10 @@ const Fade20 = () => (
 );
 
 class UIShell extends Component {
-  header = "Garage for Cloud Catalyst";
-  menuTitle = "12 Design Pattern";
+  header = "Big Blue Widgets";
+  menuTitle = "Inventory Management";
   menuItems = [
-    "Display Form",
-    "Validating Form",
-    "Update Form",
-    "Validating Form Wizard 1",
-    "Validating Form Wizard 2",
-    "Simple List",
-    "Table List",
-    "List to List",
-    "Linked List",
-    "Master Detail",
-    "Create, Read, Update, Delete",
-    "Search List",
-    "Search Form"
+    "Stock Items"
   ];
 
   constructor(props) {
@@ -82,10 +70,9 @@ class UIShell extends Component {
             </SideNavMenu>
           </SideNavItems>
         </SideNav>
-        <Content id="main-content"><UIShellBody patternName={this.state.patternName} /></Content>
+        <Content id="main-content"><UIShellBody patternName={this.state.patternName} stockService={this.props.stockService} /></Content>
       </div>
     );
   }
 }
-
 export default UIShell;
